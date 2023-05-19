@@ -76,7 +76,7 @@
         <tr>
             <td>FECHA DE PRESENTACIÓN::</td>
             <!-- Campo editable -->
-            <td>  </td>
+            <td> 19/05/2023 </td>
             <td>HORA DE PRESENTACIÓN:</td>
             <!-- Campo editable -->
             <td>  </td>
@@ -143,23 +143,23 @@
 
 - Ejercicio 01: Escriba una función que reciba el número de día de la fecha actual new Date() - https://www.w3schools.com/jsref/jsref_obj_date.asp y devuelva el texto del día de la semana correspondientes. Por ejemplo si recibe 0, devolvería “Domingo”.
 
-<img src="img/eje1.png" alt="eje1" style="width:50%; height:auto"/>
+    <img src="img/eje1.png" alt="eje1" style="width:50%; height:auto"/>
 
 - Ejercicio 02: Escriba una página web que reciba un texto y al presionar un botón muestre el mismo texto invertido en otra sección (div). Por ejemplo si se escribe “Hola”, se mostraría como “aloH”.
 
-<img src="img/eje2.png" alt="eje2" style="width:50%; height:auto"/>
+    <img src="img/eje2.png" alt="eje2" style="width:50%; height:auto"/>
 
 - Ejercicio 03: Escribir una página que muestre cuántos días faltan para el día de Arequipa!
 
-<img src="img/eje3.png" alt="eje3" style="width:50%; height:auto"/>
+    <img src="img/eje3.png" alt="eje3" style="width:50%; height:auto"/>
 
 - Ejercicio 04: Escribir un página que reciba el URL de la sesión de google meet de hoy y devuelva el código de la sesión sin guiones separadores
 
-<img src="img/eje4.png" alt="eje4" style="width:50%; height:auto"/>
+    <img src="img/eje4.png" alt="eje4" style="width:50%; height:auto"/>
 
 - Ejercicio 05: Escribir una página que permita calcular las suma de todos los valores de una tabla de valores dinámica. La idea es crear una página web con un formulario que te permita decir cuantos valores tendrá la tabla, luego, al enviar el formulario la tabla se debe crear dinámicamente, junto con otro botón de envió para calcular la suma.
 
-<img src="img/eje5.png" alt="eje5" style="width:50%; height:auto"/>
+    <img src="img/eje5.png" alt="eje5" style="width:50%; height:auto"/>
 
 - Ejercicio 06: Utilice la herramienta flipgrid - https://info.flipgrid.com/ envie un video en el tema "Presentacion y ejemplo deJavaScript" ponga aquí los enlaces de sus envíos.
 
@@ -169,16 +169,37 @@
 <!-- Aquí las preguntas del cuestionario -->
 
 - Pruebe este código de arrayGenerator() en la página https://jslint.com/
+
+    <img src="img/pruebaJSLint.png" alt="eje5" style="width:50%; height:auto"/>
+
+    Después de la correción:
+
+    <img src="img/codigoLimpioJSLint.png" alt="eje5" style="width:50%; height:auto"/>
+
+    Prueba desde consola:
+
+    <img src="img/pruebaArrayGenerator.png" alt="eje5" style="width:50%; height:auto"/>
+
 - Revisar esta discusión en stackoverflow - https://stackoverflow.com/questions/4852017/how-to-initialize-an-arrays-length-in-javascript
     * ¿Cómo se pueden resolver los warnings?
+
+        JSLint es muy estricto en las convenciones de JavaScript, por lo que la mayoría de errores que surgen suelen ser de formato o tipeado, por lo cual, a medida que en la consola aparecen los warnings, podemos ir agregando opciones de ejecución, para la identificación del console.log(), bucles como for, variables, etc.
+        En cuanto al array, el problema puede ser por la antiguedad de la versión de JSLint o su declaración como var (scope global) en vez de let.
+
     * ¿Se puede modificar la solución usando map? ¿Cómo?
+
+        map trabaja sobre valores ya establecidos en un array, por lo cual, crear uno nuevo a partir de un espacio de elementos vacíos no es posible, pero si podemos instanciar tales elementos para que el map sea posible.
+
+        <img src="img/pruebaArrayGeneratorMap.png" alt="eje5" style="width:50%; height:auto"/>
 
 
 #
 
 ## CONCLUSIONES
 <!-- Aquí sus conclusiones-->
-
+- JavaScript es un lenguaje débilmente tipado el cual posee una amplia gama de funciones y utilidades, muchas de ellas enfocadas tanto al front como al back end, lo cual, lo convierte en un lenguaje muy versátil.
+- Al ser débilmente tipado, las variables creadas se acomodan al tipo de dato que le estemos asignando, sea string, integer, char o boolean.
+- El alcance de las variables creadas en JavaScript puede ser modificado según el tipo de declaración, sea var (scope global), let (local) o const (constante y alcance de bloque).
 
 ## REFERENCIAS
 <!-- Campo editable -->
