@@ -163,6 +163,8 @@
 
 - Ejercicio 06: Utilice la herramienta flipgrid - https://info.flipgrid.com/ envie un video en el tema "Presentacion y ejemplo deJavaScript" ponga aquí los enlaces de sus envíos.
 
+    [Video-Presntación](https://flip.com/s/Gyv6DsHPk23B)
+
 #
 
 ## CUESTIONARIO
