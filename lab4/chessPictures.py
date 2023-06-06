@@ -36,6 +36,8 @@ square = Picture(SQUARE)
 #     )
 # ))
 
+# draw(knight.join(knight.replace(square).join(knight.replace(square.negative()))))
+
 
 # Ejercicios propuestos (dibujar imagenes)
 
@@ -60,5 +62,39 @@ square = Picture(SQUARE)
 
 # Ejercicio c:
 
-finalDraw = queen.horizontalRepeat(4) # Repetimos la reina 4 veces
-draw(finalDraw) # Dibujamos
+# finalDraw = queen.horizontalRepeat(4) # Repetimos la reina 4 veces
+# draw(finalDraw) # Dibujamos
+
+
+# Ejercicio d:
+
+# newDraw = square.join(square.negative()) # Creamos el par de casillas (blanco y negro)
+# finalDraw = newDraw.horizontalRepeat(4) # Repetimos para 8 casillas
+
+# draw(finalDraw) # Dibujamos
+
+
+# Ejercicio e:
+
+# newDraw = square.negative().join(square) # Creamos el par de casillas (negro y blanco)
+# finalDraw = newDraw.horizontalRepeat(4) # Repetimos para 8 casillas
+
+# draw(finalDraw) # Dibujamos
+
+
+# Ejercicio f:
+
+# newDraw1 = square.join(square.negative()) # Creamos el par de casillas (negro y blanco)
+# newDraw2 = newDraw1.horizontalRepeat(4) # Repetimos para 8 casillas
+# newDraw3 = square.negative().join(square) # Creamos el par de casillas (negro y blanco)
+# newDraw4 = newDraw3.horizontalRepeat(4) # Repetimos para 8 casillas
+
+# finalDraw = newDraw2.under(newDraw4).verticalRepeat(2) # Unimos las casillas y repetimos por dos
+
+# draw(finalDraw) # Dibujamos
+
+
+# Ejercicio g:
+
+newDraw = knight.replace(square)
+draw(newDraw)

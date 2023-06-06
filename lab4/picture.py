@@ -90,3 +90,19 @@ class Picture:
                 filaImg += value[i]
             newImg.append(filaImg)
         return Picture(newImg)
+    
+    def replace(self, p):
+        """Devuelve una figura cuyos espacios vacíos sean reemplazados por los
+        espacios de la figura pasada"""
+        newImg = []
+        for i in range(len(self.img)):
+            newValue = ""
+            for j in range(len(self.img[i])):
+                if self.img[i][j] == " ":
+                    newValue += p.img[i][j]
+                else:
+                    newValue += self.img[i][j]
+            newImg.append(newValue)
+        return Picture(newImg)
+            
+
