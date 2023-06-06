@@ -14,4 +14,6 @@ square = Picture(SQUARE)
 
 # draw(bishop.horizontalMirror())
 
-draw(queen.negative())
+# draw(queen.negative())
+
+draw(queen.join(knight))
