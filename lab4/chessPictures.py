@@ -10,4 +10,6 @@ queen = Picture(QUEEN)
 rock = Picture(ROCK)
 square = Picture(SQUARE)
 
-draw(king.verticalMirror())
+# draw(knight.verticalMirror())
+
+draw(bishop.horizontalMirror())
