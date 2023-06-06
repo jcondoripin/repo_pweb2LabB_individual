@@ -1,5 +1,6 @@
 from pieces import *
 from picture import *
+from interpreter import *
 
 bishop = Picture(BISHOP)
 king = Picture(KING)
@@ -8,3 +9,5 @@ pawn = Picture(PAWN)
 queen = Picture(QUEEN)
 rock = Picture(ROCK)
 square = Picture(SQUARE)
+
+draw(king.verticalMirror())
