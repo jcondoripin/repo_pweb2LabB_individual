@@ -41,18 +41,18 @@ square = Picture(SQUARE)
 
 # Ejercicio a:
 
-newDraw1 = knight.join(knight.negative()) # Creamos la primera fila (caballo blanco y negro)
-newDraw2 = knight.negative().join(knight) # Creamos la segunda fila (caballo negro y blanco)
+# newDraw1 = knight.join(knight.negative()) # Creamos la primera fila (caballo blanco y negro)
+# newDraw2 = knight.negative().join(knight) # Creamos la segunda fila (caballo negro y blanco)
 
-finalDraw = newDraw1.under(newDraw2) # Colocamos uno debajo del otro
-draw(finalDraw) # Dibujamos
+# finalDraw = newDraw1.under(newDraw2) # Colocamos uno debajo del otro
+# draw(finalDraw) # Dibujamos
 
 
 # Ejercicio b:
 
 newDraw1 = knight.join(knight.negative()) # Creamos la primera fila (caballo blanco y negro)
-newDraw2 = knight.negative().horizontalMirror().join(
-    knight.horizontalMirror()) # Creamos la segunda fila (caballo negro y blanco inversos)
+newDraw2 = knight.negative().verticalMirror().join(
+    knight.verticalMirror()) # Creamos la segunda fila (caballo negro y blanco inversos)
 
 finalDraw = newDraw1.under(newDraw2) # Colocamos uno debajo del otro
 draw(finalDraw) # Dibujamos
