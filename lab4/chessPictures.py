@@ -24,4 +24,14 @@ square = Picture(SQUARE)
 
 # draw(king.horizontalRepeat(4))
 
-draw(king.verticalRepeat(4))
+# draw(king.verticalRepeat(4))
+
+draw(king.join(
+    king.rotate().join(
+        king.rotate().rotate().join(
+            king.rotate().rotate().rotate().join(
+                king.rotate().rotate().rotate().rotate()
+            )
+        )
+    )
+))
