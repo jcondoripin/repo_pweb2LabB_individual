@@ -50,9 +50,15 @@ square = Picture(SQUARE)
 
 # Ejercicio b:
 
-newDraw1 = knight.join(knight.negative()) # Creamos la primera fila (caballo blanco y negro)
-newDraw2 = knight.negative().verticalMirror().join(
-    knight.verticalMirror()) # Creamos la segunda fila (caballo negro y blanco inversos)
+# newDraw1 = knight.join(knight.negative()) # Creamos la primera fila (caballo blanco y negro)
+# newDraw2 = knight.negative().verticalMirror().join(
+#     knight.verticalMirror()) # Creamos la segunda fila (caballo negro y blanco inversos)
 
-finalDraw = newDraw1.under(newDraw2) # Colocamos uno debajo del otro
+# finalDraw = newDraw1.under(newDraw2) # Colocamos uno debajo del otro
+# draw(finalDraw) # Dibujamos
+
+
+# Ejercicio c:
+
+finalDraw = queen.horizontalRepeat(4) # Repetimos la reina 4 veces
 draw(finalDraw) # Dibujamos
