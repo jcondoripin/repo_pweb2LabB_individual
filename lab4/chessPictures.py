@@ -26,12 +26,33 @@ square = Picture(SQUARE)
 
 # draw(king.verticalRepeat(4))
 
-draw(king.join(
-    king.rotate().join(
-        king.rotate().rotate().join(
-            king.rotate().rotate().rotate().join(
-                king.rotate().rotate().rotate().rotate()
-            )
-        )
-    )
-))
+# draw(king.join(
+#     king.rotate().join(
+#         king.rotate().rotate().join(
+#             king.rotate().rotate().rotate().join(
+#                 king.rotate().rotate().rotate().rotate()
+#             )
+#         )
+#     )
+# ))
+
+
+# Ejercicios propuestos (dibujar imagenes)
+
+# Ejercicio a:
+
+newDraw1 = knight.join(knight.negative()) # Creamos la primera fila (caballo blanco y negro)
+newDraw2 = knight.negative().join(knight) # Creamos la segunda fila (caballo negro y blanco)
+
+finalDraw = newDraw1.under(newDraw2) # Colocamos uno debajo del otro
+draw(finalDraw) # Dibujamos
+
+
+# Ejercicio b:
+
+newDraw1 = knight.join(knight.negative()) # Creamos la primera fila (caballo blanco y negro)
+newDraw2 = knight.negative().horizontalMirror().join(
+    knight.horizontalMirror()) # Creamos la segunda fila (caballo negro y blanco inversos)
+
+finalDraw = newDraw1.under(newDraw2) # Colocamos uno debajo del otro
+draw(finalDraw) # Dibujamos
