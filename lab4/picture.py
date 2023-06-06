@@ -45,7 +45,12 @@ class Picture:
         return Picture(imgConcat)
 
     def up(self, p):
-        return Picture(None)
+        imgConcat = []
+        for value in p.img:
+            imgConcat.append(value)
+        for value in self.img:
+            imgConcat.append(value)
+        return Picture(imgConcat)
 
     def under(self, p):
         """ Devuelve una nueva figura poniendo la figura p sobre la

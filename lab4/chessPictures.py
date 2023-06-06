@@ -16,4 +16,6 @@ square = Picture(SQUARE)
 
 # draw(queen.negative())
 
-draw(queen.join(knight))
+# draw(queen.join(knight))
+
+draw(king.up(queen))
