@@ -22,4 +22,6 @@ square = Picture(SQUARE)
 
 # draw(rock.under(king))
 
-draw(king.horizontalRepeat(4))
+# draw(king.horizontalRepeat(4))
+
+draw(king.verticalRepeat(4))
