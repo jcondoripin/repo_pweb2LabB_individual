@@ -18,4 +18,6 @@ square = Picture(SQUARE)
 
 # draw(queen.join(knight))
 
-draw(king.up(queen))
+# draw(king.up(queen))
+
+draw(rock.under(king))
