@@ -94,7 +94,41 @@ square = Picture(SQUARE)
 # draw(finalDraw) # Dibujamos
 
 
-# Ejercicio g:
+# Ejercicio g: Tablero completo
 
-newDraw = knight.replace(square)
-draw(newDraw)
+# Patron de colocación
+patron1 = [rock, knight, bishop]
+patron2 = [queen, king]
+
+filaPiezas1 = patron1 + patron2 + patron1[::-1]
+filaPiezas2 = [pawn] * 8
+
+casillas1 = square.join(square.negative()) # Creamos el par de casillas (negro y blanco)
+casillas2 = casillas1.horizontalRepeat(4) # Repetimos para 8 casillas
+casillas3 = square.negative().join(square) # Creamos el par de casillas (negro y blanco)
+casillas4 = casillas3.horizontalRepeat(4) # Repetimos para 8 casillas
+
+casillas = casillas2.under(casillas4)
+
+fila1 = filaPiezas1[0].negative()
+for pieza in filaPiezas1[1:-1]:
+    fila1 = fila1.join(pieza.negative())
+fila1 = fila1.join(filaPiezas1[-1].negative())
+
+fila2 = filaPiezas2[0].negative()
+for pieza in filaPiezas2[1:-1]:
+    fila2 = fila2.join(pieza.negative())
+fila2 = fila2.join(filaPiezas2[-1].negative())
+
+filasCasillas1 = fila1.under(fila2).replace(casillas)
+
+filasCasillas2 = fila2.negative().under(fila1.negative()).replace(casillas)
+
+tablero = filasCasillas1.under(casillas.verticalRepeat(2).under(filasCasillas2))
+draw(tablero)
+    
+
+
+
+
+
