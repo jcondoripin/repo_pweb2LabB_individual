@@ -113,9 +113,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
-
+# The URL to use when referring to static files (where they will be served from)
 STATIC_URL = 'static/'
 
 # Default primary key field type
