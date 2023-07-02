@@ -36,3 +36,8 @@
     border-radius: 0;
     padding: 0.5rem 1.3rem;
 }
+@media screen and (min-width:992px) {
+    .container {
+        display: flex;
+    }
+}
