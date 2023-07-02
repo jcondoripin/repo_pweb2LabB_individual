@@ -1,3 +1,4 @@
+from typing import Any
 from django.db import models
 import uuid  # Required for unique book instances
 from datetime import date
@@ -6,6 +7,8 @@ from django.urls import reverse  # To generate URLS by reversing URL patterns
 
 
 class Genre(models.Model):
+    def __init__(self) -> None:
+        super().__init__(*args, **kwargs)
     """Model representing a book genre (e.g. Science Fiction, Non Fiction)."""
     name = models.CharField(
         max_length=200,
@@ -33,7 +36,7 @@ class Book(models.Model):
     author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
     # Foreign Key used because book can only have one author, but authors can have multiple books
     # Author as a string rather than object because it hasn't been declared yet in file.
-    summary = models.TextField(max_length=1000, help_text="Enter a brief description of the book")
+    summary = models.TextField()
     isbn = models.CharField('ISBN', max_length=13,
                             unique=True,
                             help_text='13 Character <a href="https://www.isbn-international.org/content/what-isbn'
