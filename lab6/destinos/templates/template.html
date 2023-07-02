@@ -7,9 +7,14 @@
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+    <!-- Archivos estáticos -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
 </head>
 <body>
     {% block content %}
     {% endblock %}
+    <!-- Scripts estáticos -->
+    <script src="{% static 'js/app.js' %}"></script>
 </body>
 </html>
