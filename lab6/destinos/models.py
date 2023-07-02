@@ -11,4 +11,4 @@ class Destino(models.Model):
 
     precioTour = models.FloatField(blank=False, null=False, help_text="Precio del tour a esta ciudad de destino turístico")
 
-    oferta = models.BooleanField(default=False, null=False, blank=False, help_text="Decide si el viaje a este destino turístico está de oferta")
+    oferta = models.BooleanField(default=False, null=False, blank=True, help_text="Decide si el viaje a este destino turístico está de oferta")
