@@ -2,8 +2,12 @@ from django.shortcuts import render, redirect
 from .models import Destino
 
 # Create your views here.
-def index(request):
-    return render(request, 'index.html')
+def index(request, *args):
+
+    # Consulta de todos los registros
+    destinos = Destino.objects.all()
+
+    return render(request, 'index.html', context={'destinos': destinos, 'message': args})
 
 def create(request):
     if request.method == 'POST':

@@ -43,6 +43,23 @@
     border: none;
     text-transform: uppercase;
 }
+.table-parent {
+    max-height: 600px;
+    overflow-y: scroll;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.thead {
+    position: sticky;
+}
+.tcol-img{
+    width: 200px;
+}
+.tcol-img img {
+    width: 100%;
+}
 @media screen and (min-width:992px) {
     .container {
         display: flex;
