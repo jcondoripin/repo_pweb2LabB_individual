@@ -1,4 +1,5 @@
-<form class="card form-card">
+<form class="card form-card" action="create" method="POST">
+    {% csrf_token  %}
     <div class="card-header bg-dark text-white">
         <h3 class="text-center">Registrar destino</h3>
     </div>
@@ -10,7 +11,7 @@
             <textarea name="descripcion" id="descripcion" cols="30" rows="3" placeholder="Descripción de ciudad" class="w-100 input form-input" required></textarea>
         </div>
         <div class="form-group">
-            <input type="number" class="w-100 input form-input" step="0.1" min="0" placeholder="Precio de tour" required>
+            <input name="precioTour" type="number" class="w-100 input form-input" step="0.1" min="0" placeholder="Precio de tour" required>
         </div>
         <div class="form-group">
             <label for="imagen" class="px-3">Imagen:</label>

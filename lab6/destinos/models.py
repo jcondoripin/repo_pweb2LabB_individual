@@ -7,7 +7,7 @@ class Destino(models.Model):
 
     descripcion = models.TextField(blank=False, null=False, help_text="Descripción de esta ciudad de destino turístico")
 
-    imagen = models.ImageField(upload_to="static/images/", help_text="Imagen de esta ciudad de destino turístico")
+    imagen = models.ImageField(upload_to="destinos", help_text="Imagen de esta ciudad de destino turístico")
 
     precioTour = models.FloatField(blank=False, null=False, help_text="Precio del tour a esta ciudad de destino turístico")
 
