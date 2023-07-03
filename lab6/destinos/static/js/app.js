@@ -18,6 +18,15 @@ function changeEdit(row) {
     window.location.pathname = `/show/${id}`;
 }
 
-function displaySale() {
-    
+function displaySale(check) {
+    let input = document.getElementById('inDescuento');
+    let option = document.getElementById('opDescuento');
+
+    console.log(check.checked);
+    if (check.checked) {
+        
+    } else {
+
+    }
+
 }
