@@ -13,6 +13,4 @@ class Destino(models.Model):
 
     oferta = models.BooleanField(default=False, help_text="Decide si el viaje a este destino turístico está de oferta")
 
-    descuento = models.FloatField(default=0, blank=True, help_text="Descuento establecido por oferta (number | percentage)")
-
-    tipoDescuento = models.CharField(null=True, blank=True, choices=[('#', 'number'), ('%', 'percentage')], max_length=1)
+    descuento = models.IntegerField(default=0, blank=True, help_text="Descuento establecido por oferta (porcentaje 0 - 100)")

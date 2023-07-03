@@ -22,11 +22,22 @@ function displaySale(check) {
     let input = document.getElementById('inDescuento');
     let option = document.getElementById('opDescuento');
 
-    console.log(check.checked);
     if (check.checked) {
-        
+        input.removeAttribute('disabled');
+        option.removeAttribute('disabled');
     } else {
-
+        input.setAttribute('disabled', true);
+        option.setAttribute('disabled', true);
     }
+}
+
+// Para no borrar el precio inicial
+const precioInicial = document.getElementById('precioTour').value; 
+function descontar() {
+
+    let precio = document.getElementById('precioTour');
+    let descuento = document.getElementById('inDescuento').value;
+    
+    precio.value = precioInicial * (1 - descuento / 100);
 
 }
