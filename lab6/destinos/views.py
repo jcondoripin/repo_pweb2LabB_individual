@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import JsonResponse
+from django.http import HttpResponse
 from .models import Destino
 
 # Create your views here.
@@ -25,13 +25,14 @@ def create(request):
     return redirect('index')
 
 def show(request, id):
+    try:
 
-    destino = Destino.objects.get(pk=id)
+        destino = Destino.objects.get(pk=id)
 
-    return JsonResponse({
-        'nombre': destino.nombre,
-        'descripcion': destino.descripcion,
-        'precioTour': destino.precioTour,
-        'imagen': destino.imagen.path,
-        'oferta': destino.oferta
-    })
+        return render(request, 'index.html', context={'destino': destino})
+    
+    except Destino.DoesNotExist:
+
+        return redirect('index')
+    
+    

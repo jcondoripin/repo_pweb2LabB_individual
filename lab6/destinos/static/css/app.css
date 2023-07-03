@@ -1,3 +1,6 @@
+a {
+    text-decoration: none;
+}
 .form {
     height: 25px;
 }
@@ -10,12 +13,16 @@
     width: 100%;
     margin: 0.7rem 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 .form-card {
     border: none;
+    max-width: 500px;
     box-shadow: 0 4px 15px 2px rgba(88, 88, 88, 0.717);
+}
+.form-check {
+    width: 20px;
 }
 .input {
     max-height: 100%;
@@ -43,6 +50,12 @@
     border: none;
     text-transform: uppercase;
 }
+.form-image {
+    width: 100%;   
+}
+.form-image img {
+    width: 100%;   
+}
 .table-parent {
     max-height: 600px;
     overflow-y: scroll;
@@ -62,6 +75,7 @@
 }
 .tcol-img{
     width: 200px;
+    text-align: center;
 }
 .tcol-img img {
     width: 100%;

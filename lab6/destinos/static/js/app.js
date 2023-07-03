@@ -17,3 +17,7 @@ function changeEdit(row) {
     let id = row.childNodes.item(1).textContent;
     window.location.pathname = `/show/${id}`;
 }
+
+function displaySale() {
+    
+}

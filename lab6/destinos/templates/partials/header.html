@@ -1,7 +1,7 @@
 <header class="w-100 col-md-12 bg-dark p-3">
     <div class="d-flex justify-content-between align-items-center">
         <div>
-            <h1 class="fs-2 text-white">DestinyApp</h1>
+            <a class="fs-2 text-white" href="/"><h1>Destiny<span class="text-success">App</span></h1></a>
         </div>
         {% if request.path == '/' %}
             <div class="col-md-4 col-sm-5 col-lg-3">
@@ -16,7 +16,7 @@
                 </div>
             </div>
         {% else %}
-            <h3>Edición de destino</h3>
+            <h3 class="text-white">{{ destino.nombre }}</h3>
         {% endif %}
     </div>
 </header>
