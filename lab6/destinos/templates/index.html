@@ -4,14 +4,23 @@
 
     {% include './partials/header.html' %}
 
-    <div class="container mt-4">
-        <div class="col-lg-4 col-md-12 col-sm-12">
+    <div class="container gap-5">
+        
+    {% if request.path == '/' %}
+        <!-- Index (listado) -->
+        <div class="col-lg-4 col-md-12 col-sm-12 mt-4">
             {% include './components/formInsert.html' %}
         </div>
-        <div class="col-lg-8 col-md-12 col-sm-12">
+        <div class="col-lg-8 col-md-12 col-sm-12 mt-4">
             <!-- Tabla de destinos turísticos -->
             {% include './components/table.html' %}
         </div>
-    </div>
+    {% else %}
+        <!-- Show (edicion)-->
+        <div class="col-md-12 mt-4">
+            {% include './components/formEdit.html' %}
+        </div>
+    {% endif %}     
 
+    </div>
 {% endblock %}

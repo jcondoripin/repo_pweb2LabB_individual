@@ -54,6 +54,12 @@
 .thead {
     position: sticky;
 }
+.trow {
+    cursor: pointer;
+}
+.trow:hover {
+    background-color: rgba(176, 176, 176, 0.356);
+}
 .tcol-img{
     width: 200px;
 }

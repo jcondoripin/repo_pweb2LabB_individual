@@ -1,7 +1,8 @@
-<div class="table-parent ms-5">
+<div class="table-parent">
     <table class="table">
         <thead class="thead">
             <tr>
+                <th>ID</th>
                 <th>Imagen</th>
                 <th>Nombre Ciudad</th>
                 <th>Precio</th>
@@ -11,7 +12,8 @@
         <tbody class="tbody" id="tbody">
             <!-- Listado de destinos turisticos -->
             {% for destino in destinos %}
-                <tr class="trow" onclick="changeForm()">
+                <tr class="trow" onclick="changeEdit(this)">
+                    <td class="tcol">{{ destino.id }}</td>
                     <td class="tcol-img tcol">
                         <img src="../../../media/{{destino.imagen}}" alt="{{ destino.nombre }}">
                     </td>
