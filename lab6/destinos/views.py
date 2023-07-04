@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse, HttpResponseNotFound
 from .models import Destino
 
 # Create your views here.
@@ -11,6 +11,7 @@ def index(request):
     return render(request, 'index.html', context={'destinos': destinos})
 
 def create(request):
+
     if request.method == 'POST':
         newDestino = Destino()
 
@@ -23,6 +24,23 @@ def create(request):
         newDestino.save()
 
     return redirect('index')
+
+def delete(request, id):
+
+    if request.method == 'DELETE':
+        try:
+            destino = Destino.objects.get(pk=id)
+
+            nombre = destino.nombre
+
+            destino.delete()
+
+            return HttpResponse(f'{nombre} fue eliminado correctamente')
+        except Exception:
+            return HttpResponseNotFound(f'Id {id} no encontrado')
+    else:
+        return redirect('index')
+
 
 def show(request, id):
     try:
@@ -61,6 +79,3 @@ def edit(request):
     except Destino.DoesNotExist:
 
         return redirect('index')
-
-    
-    

@@ -73,6 +73,9 @@ a {
 .trow:hover {
     background-color: rgba(176, 176, 176, 0.356);
 }
+.tcol {
+    vertical-align: middle;
+}
 .tcol-img{
     width: 200px;
     text-align: center;

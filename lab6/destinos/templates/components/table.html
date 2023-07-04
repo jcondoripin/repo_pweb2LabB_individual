@@ -7,12 +7,14 @@
                 <th>Nombre Ciudad</th>
                 <th>Precio</th>
                 <th class="text-center">En oferta</th>
+                <th>Acción</th>
             </tr>
         </thead>
         <tbody class="tbody" id="tbody">
+            <input type="hidden" value="{{ csrf_token }}" id="token">
             <!-- Listado de destinos turisticos -->
             {% for destino in destinos %}
-                <tr class="trow" onclick="changeEdit(this)">
+                <tr class="trow" onclick="changeEdit(this)" id="row{{destino.id}}">
                     <td class="tcol">{{ destino.id }}</td>
                     <td class="tcol-img tcol">
                         {% if destino.imagen != '' %}
@@ -24,7 +26,7 @@
                             </svg>
                         {% endif %}
                     </td>
-                    <td class="tcol">{{ destino.nombre }}</td>
+                    <td class="tcol tcol-column">{{ destino.nombre }}</td>
                     <td class="tcol">{{ destino.precioTour }}</td>
                     <td class="tcol">
                         {% if destino.oferta %}
@@ -43,6 +45,7 @@
                             </div>
                         {% endif %}
                     </td>
+                    <td class="tcol"><button class="btn btn-danger" onclick="deleteDestiny(event)">Eliminar</button></td>
                 </tr>
             {% endfor %}
         </tbody>

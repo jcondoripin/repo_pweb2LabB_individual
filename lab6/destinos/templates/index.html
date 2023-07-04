@@ -17,6 +17,14 @@
             <!-- Tabla de destinos turísticos -->
             {% include './components/table.html' %}
         </div>
+        
+        <div aria-live="polite" aria-atomic="true" class="position-relative">
+            <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toast-container">
+
+            </div>
+        </div>
+
+        
     {% else %}
         <!-- Show (edicion)-->
         <div class="col-md-12 mt-4 text-center">
