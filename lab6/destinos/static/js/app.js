@@ -134,94 +134,13 @@ function deleteDestiny(e) {
     });
 }
 
-// function deleteDestiny(e) {
-//     e.stopPropagation();
-//     let row = e.target.parentNode.parentNode;
-//     let id = row.childNodes[1].textContent;
-//     let token = document.querySelector('#token').value;
-//     fetch(`/delete/${id}`, { 
-//         method: 'DELETE',
-//         headers: {
-//             'X-CSRFToken': token
-//         }
-//     })
-//     .then(res => res.text())
-//     .then(data => {
-//         // Crear el elemento del toast
-//         const toast = document.createElement('div');
-//         toast.classList.add('toast');
-//         toast.classList.add('show');
-//         toast.setAttribute('role', 'alert');
-//         toast.setAttribute('aria-live', 'assertive');
-//         toast.setAttribute('aria-atomic', 'true');
-//         toast.setAttribute('data-bs-autohide', 'true');
-//         toast.setAttribute('data-bs-delay', '3000');
-
-//         // Agregar el contenido al toast
-//         toast.innerHTML = `
-//         <div class="toast-header bg-success">
-//             <strong class="me-auto text-white">Confirmación</strong>
-//             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Cerrar"></button>
-//         </div>
-//         <div class="toast-body">${data}</div>
-//         `;
-
-//         // Agregar el toast al contenedor
-//         const toastContainer = document.getElementById('toast-container');
-//         toastContainer.appendChild(toast);
-
-//         // Mostrar el toast
-//         const bsToast = new bootstrap.Toast(toast, { autohide: true, delay: 3300 });
-//         bsToast.show();
-
-//         toast.addEventListener('hidden.bs.toast', () => {
-//             toast.remove();
-//         });
-//     })
-//     .catch(err => {
-//         // Crear el elemento del toast
-//         const toast = document.createElement('div');
-//         toast.classList.add('toast');
-//         toast.classList.add('show');
-//         toast.setAttribute('role', 'alert');
-//         toast.setAttribute('aria-live', 'assertive');
-//         toast.setAttribute('aria-atomic', 'true');
-//         toast.setAttribute('data-bs-autohide', 'true');
-//         toast.setAttribute('data-bs-delay', '3000');
-
-//         // Agregar el contenido al toast
-//         toast.innerHTML = `
-//         <div class="toast-header bg-danger">
-//             <strong class="me-auto text-white">Error</strong>
-//             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Cerrar"></button>
-//         </div>
-//         <div class="toast-body">${err}</div>
-//         `;
-
-//         // Agregar el toast al contenedor
-//         const toastContainer = document.getElementById('toast-container');
-//         toastContainer.appendChild(toast);
-
-//         // Mostrar el toast
-//         const bsToast = new bootstrap.Toast(toast, { autohide: true, delay: 3300 });
-//         bsToast.show();
-
-//         toast.addEventListener('hidden.bs.toast', () => {
-//             toast.remove();
-//         });
-//     })
-// }
-
 function displaySale(check) {
     let input = document.getElementById('inDescuento');
-    let option = document.getElementById('opDescuento');
 
     if (check.checked) {
         input.removeAttribute('disabled');
-        option.removeAttribute('disabled');
     } else {
         input.setAttribute('disabled', true);
-        option.setAttribute('disabled', true);
     }
 }
 
