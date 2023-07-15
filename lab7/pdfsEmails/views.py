@@ -19,6 +19,9 @@ class GeneratePdf(View):
             response = HttpResponse(pdf, content_type='application/pdf')
             fileName = f'Invoice_{id}.pdf'
             content = f'inline; filename={fileName}'
+            download = request.GET.get('download')
+            if download:
+                content = f"attachment; filename=force{fileName}"
             response['Content-Disposition'] = content
             return response
         return HttpResponse(pdf, content_type='application/pdf')

@@ -17,7 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from pdfsEmails.views import GeneratePdf
+from test_email import views as emailView
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('pdf/<id>', GeneratePdf.as_view())
+    path('pdf/<id>', GeneratePdf.as_view()),
+    path('email', emailView.index)
 ]
