@@ -51,10 +51,10 @@
 
 %AQUIIII: CAMBIA LA INFO DEL LAB
 \newcommand{\itemAcademic}{2023 - A}
-\newcommand{\itemInput}{Del 23 Junio 2023}
-\newcommand{\itemOutput}{Al 03 Junio 2023}
-\newcommand{\itemPracticeNumber}{06}
-\newcommand{\itemTheme}{Django - Usando una plantilla para ver Destinos Turísticos}
+\newcommand{\itemInput}{Del 04 de Julio 2023}
+\newcommand{\itemOutput}{Al 14 de Julio 2023}
+\newcommand{\itemPracticeNumber}{07}
+\newcommand{\itemTheme}{Django - Relaciones uno a muchos y muchos a muchos en BD}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -165,14 +165,128 @@
     
 \section{Ejercicios}
 \begin{itemize}
-    \item Deberán replicar la actividad del video donde se obtiene una plantilla de una aplicación de Destinos turísticos y adecuarla a un proyecto en blanco Django.
-    \item Luego trabajar con un modelo de tabla DestinosTuristicos donde se guarden nombreCiudad, descripcionCiudad, imagenCiudad, precioTour, ofertaTour (booleano). Estos destinos turísticos deberán ser agregados en una vista dinámica utilizando tags for e if.
-    \item Para ello crear una carpeta dentro del proyecto github colaborativo con el docente, e informar el link donde se encuentra.
-    \item Crear formularios de Añadir Destinos Turísticos, Modificar, Listar y Eliminar Destinos.
-    \item Eres libre de agregar CSS para decorar tu trabajo.
-    \item Ya sabes que el trabajo con Git es obligatorio. Revisa el avance de la teoría Django parte 4
+    \item Reproducir las actividades de los videos donde se trabajan: relaciones de uno a muchos, muchos a muchos, impresión de PDFs y envío de emails.
+    \item Crear un video en Flipgrid.
 \end{itemize} 
 
+    Estructura inicial del proyecto
+    \begin{figure}
+        \centering
+        \includegraphics[width=150mm]{img/img0.png}
+        \caption{Estructura inicial}
+        \label{fig:enter-label}
+    \end{figure}
+    \begin{figure}
+        \centering
+        \includegraphics[width=150mm]{img/commit1.png}
+        \caption{Commit de estructura inicial}
+        \label{fig:enter-label}
+    \end{figure}
+    
+    \subsection{Resolucion de ejercicios}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/img1.png}
+            \caption{Creacion de objetos y relacion de uno a muchos}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/img2.png}
+            \caption{Tablas creadas}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/img3.png}
+            \caption{Relacion muchos a muchos}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/img4.png}
+            \caption{Prueba con objetos iniciales}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/commit2.png}
+            \caption{Commit de creacion de tablas y migraciones}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/img5.png}
+            \caption{Base de datos creada en phpmyadmin}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/img6.png}
+            \caption{Configuracion de conexion con nueva base de datos}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/commit3.png}
+            \caption{Commit de migracion a base de datos local}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/img7.png}
+            \caption{Instalacion de paquete para impresion de pdf}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/img8.png}
+            \caption{Enlace con templates}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/img9.png}
+            \caption{Estructura de proyecto de pdf}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/img10.png}
+            \caption{Vista index de template pdf de ejemplo}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/img11.png}
+            \caption{Descarga forzada}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/img12.png}
+            \caption{Envio de email a correo falso}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/img13.png}
+            \caption{View index con envio de email}
+            \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}
+            \centering
+            \includegraphics[width=150mm]{img/commit4.png}
+            \caption{Commit para envio de emails a correos falsos}
+            \label{fig:enter-label}
+        \end{figure}
+    \newpage
+    \subsection{Videos}
+        Parte 1: \href{https://flip.com/s/y4LkgKW_kXnS}{Part1}
+        Parte 2: \href{https://flip.com/s/Zvr3Pnzpbx5_}{Part2}
+        Parte 3: \href{https://flip.com/s/TssDry1NFsxz}{Part3}
+
+\newpage
 \section{\textcolor{red}{Rubricas}}
         \subsection{\textcolor{red}{Rubrica para entregable Informe}}
             \begin{table}[ht]
@@ -197,6 +311,7 @@
                     \end{tabular}
                 \label{tab:tab1}
             \end{table}
+            
         \subsection{\textcolor{red}{Rubrica para el contenido del Informe y demostracion}}
             \begin{itemize}
                 \item El alumno debera marcar o dejar en blanco en las celdas de la columna Checklist, deacuerdo a si cumplio o no con el ́ıtem correspondiente.
@@ -240,7 +355,7 @@
                     \hline
                     \textbf{2. Commits} & Hay capturas de pantalla de los commits mas importantes con sus explicaciones detalladas. (El profesor puede preguntar para refrendar calificacion). & 4 & X & 3 &   \\
                     \hline
-                    \textbf{3. Código fuente} & Hay porciones de codigo fuente importantes con numeracion y explicaciones detalladas de sus funciones. & 2 & X & 2 &   \\
+                    \textbf{3. Código fuente} & Hay porciones de codigo fuente importantes con numeracion y explicaciones detalladas de sus funciones. & 2 & X & 1 &   \\
                     \hline
                     \textbf{4. Ejecucion} & Se incluyen ejecuciones/pruebas del codigo fuente explicadas gradualmente. & 2 & X & 2 &   \\
                     \hline
@@ -252,24 +367,9 @@
                     \hline
                     \textbf{8. Madurez} & El Informe muestra de manera general una evolucion de la madurez del codigo fuente, explicaciones puntuales pero precisas y un acabado impecable. (El profesor puede preguntar para refrendar calificacion). & 4 & X & 3 &   \\
                     \hline
-                    \multicolumn{2}{|c|}{Total} & 20 &  & 18 & \\
+                    \multicolumn{2}{|c|}{Total} & 20 &  & 17 & \\
                     \hline
                 \end{tabular}
                 \label{tab:tab3}
             \end{table}
-    
-\section{Referencias}
-        \begin{itemize}
-            \item \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website}
-            \item \url{https://github.com/mdn/django-locallibrary-tutorial}
-            \item \url{https://github.com/rescobedoq/pw2/tree/main/labs/lab05}
-            \item William S. Vincent. (2022). Django for Beginners: Build websites with Python. Django 4.0.leanpub.com [\href{http://library.lol/main/22AF742D96697DE55EF5F88B08F1AA86}{URL}]
-            \item \url{https://docs.djangoproject.com/en/4.1/ref/models/fields/}
-            \item \url{https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_many/}
-            \item \url{https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/}
-            \item \url{https://blog.hackajob.co/djangos-new-database-constraints/}
-            \item \url{https://stackoverflow.com/questions/3330435/is-there-an-sqlite-equivalent-to-mysqls-describe-table}
-            \item \url{https://docs.djangoproject.com/en/4.1/ref/validators/#how-validators-are-run}
-            \item \url{https://docs.djangoproject.com/en/4.1/ref/models/instances/}
-        \end{itemize}
 \end{document}  
