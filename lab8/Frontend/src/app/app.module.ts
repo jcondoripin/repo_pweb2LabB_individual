@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +12,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormComponent } from './components/form/form.component';
 import { TableViewComponent } from './views/table-view/table-view.component';
 import { AboutViewComponent } from './views/about-view/about-view.component';
-import { TableShowViewComponent } from './views/table-show-view/table-show-view.component'
+import { TableShowViewComponent } from './views/table-show-view/table-show-view.component';
+import { TableComponent } from './components/table/table.component'
 
 @NgModule({
   declarations: [
@@ -22,12 +24,14 @@ import { TableShowViewComponent } from './views/table-show-view/table-show-view.
     FormComponent,
     TableViewComponent,
     AboutViewComponent,
-    TableShowViewComponent
+    TableShowViewComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule // Peticiones backend
+    HttpClientModule, // Peticiones backend
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

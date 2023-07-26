@@ -20,6 +20,10 @@ export class EmployeeServiceService {
     return this.httpClient.get<Employee[]>(`${this.urlApi}employees/`)
   }
 
+  create(data : Employee) : Observable<any> {
+    return this.httpClient.post(`${this.urlApi}employees/`, data)
+  }
+
   show(id : number) : Observable<Employee>{
     return this.httpClient.get<Employee>(`${this.urlApi}employees/${id}`)
   }

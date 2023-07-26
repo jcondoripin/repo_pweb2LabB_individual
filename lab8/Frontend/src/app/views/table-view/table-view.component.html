@@ -1,1 +1,13 @@
-<p>table-view works!</p>
+<div class="container">
+  <div class="card">
+    <app-form [title]="'Registro de empleados'"
+              [title_button]="'Registrar empleado'"
+              (submitData)="createEmployee($event)">
+    </app-form>
+  </div>
+  <div class="table-parent">
+    <app-table  [employees]="employees"
+                (deletedEmployee)="popEmployeeList($event)">
+    </app-table>
+  </div>
+</div>
