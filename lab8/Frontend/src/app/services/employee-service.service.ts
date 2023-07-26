@@ -25,7 +25,7 @@ export class EmployeeServiceService {
   }
 
   show(id : number) : Observable<Employee>{
-    return this.httpClient.get<Employee>(`${this.urlApi}employees/${id}`)
+    return this.httpClient.get<Employee>(`${this.urlApi}employees/${id}/`)
   }
 
   update(id: number, employee: Employee) : Observable<any> {

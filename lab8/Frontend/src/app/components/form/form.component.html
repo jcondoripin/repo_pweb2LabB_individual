@@ -16,8 +16,11 @@
       <input type="number" step="0.01" min="100" name="salary" formControlName="salary"  placeholder="Salario" required>
     </div>
     <div class="form__submit">
-      <button type="submit">
+      <button type="submit" class="button">
         {{title_button}}
+      </button>
+      <button type="button" class="button button--danger" routerLink="../" *ngIf="hasButtonBack">
+        Volver
       </button>
     </div>
   </form>

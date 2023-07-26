@@ -1,1 +1,10 @@
-<p>table-show-view works!</p>
+<div class="container">
+  <div class="card">
+    <app-form [title]="'Edicion de empleados'"
+              [title_button]="'Editar empleado'"
+              [employee]="employee"
+              [hasButtonBack]="true"
+              (submitData)="updateEmployee($event)">
+    </app-form>
+  </div>
+</div>

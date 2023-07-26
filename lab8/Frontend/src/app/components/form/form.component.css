@@ -26,15 +26,28 @@ input:focus {
   text-align: center;
   user-select: none;
 }
-.form__submit button {
+.form__submit {
+  display: flex;
+  flex-direction: column;
+  row-gap: .6rem;
+}
+.form__submit .button {
   width: 100%;
   padding: 1rem;
-  background-color: rgba(24, 24, 24, 0.975);
+  background-color: rgba(42, 41, 41, 0.975);
   color: white;
   font-size: 1rem;
   cursor: pointer;
   transition: .2s ease-in;
+  border: none;
 }
-.form__submit button:hover {
-  background-color: black;
+.form__submit .button:hover {
+  background-color: rgba(0, 0, 0, 0.975);
+
+}
+.form__submit .button--danger {
+  background-color: rgb(188, 48, 48);
+}
+.form__submit .button--danger:hover {
+  background-color: rgb(200, 16, 16);
 }
